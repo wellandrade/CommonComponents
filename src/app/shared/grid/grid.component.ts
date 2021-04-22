@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { TipoDeDadosTabela } from 'src/app/principal/principal-table/principal-table.component';
+import { TipoDeDadosTabela } from 'src/app/models/tipo-dados.model';
 
 @Component({
   selector: 'app-grid',

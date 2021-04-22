@@ -1,4 +1,4 @@
-export interface PeriodicElement {
+export interface DadosCliente {
     id: number;
     nome: string;
     CPF: string;
