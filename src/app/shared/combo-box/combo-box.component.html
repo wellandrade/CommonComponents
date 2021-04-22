@@ -1,0 +1,7 @@
+<mat-form-field class="combo-box">
+    <mat-label>{{ nomeCombo }}</mat-label>
+    <mat-select>
+        <mat-option *ngFor="let item of conteudoCombo" [value]="item" (click)="itemSelecionado(item)">{{ item.Descricao }}
+        </mat-option>
+    </mat-select>
+</mat-form-field>

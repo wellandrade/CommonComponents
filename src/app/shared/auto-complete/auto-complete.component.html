@@ -1,0 +1,10 @@
+<mat-form-field class="auto-complete">
+    <mat-label>{{ nomeAutoComplete }}</mat-label>
+    <input matInput aria-label="State" [matAutocomplete]="auto" [formControl]="autoCompleteControl">
+    <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let item of filtroAutoComplete | async" [value]="item.Valor"
+            (onSelectionChange)="autoCompleteChange(item)">
+            <span>{{ item.Valor }}</span>
+        </mat-option>
+    </mat-autocomplete>
+</mat-form-field>
