@@ -20,6 +20,7 @@ import { MatTableModule } from '@angular/material/table';
 import { PrincipalTableComponent } from './principal/principal-table/principal-table.component';
 import { MascaraCnpjPipe } from './pipes/mascara-cnpj.pipe';
 import { MascaraCPFPipe } from './pipes/mascara-cpf.pipe';
+import { FormularioComponent } from './formulario/formulario.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MascaraCPFPipe } from './pipes/mascara-cpf.pipe';
     GridComponent,
     PrincipalTableComponent,
     MascaraCnpjPipe,
-    MascaraCPFPipe
+    MascaraCPFPipe,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,
