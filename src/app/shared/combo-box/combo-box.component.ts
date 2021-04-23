@@ -12,14 +12,23 @@ export class ComboBoxComponent implements OnInit {
 
   @Input() conteudoCombo: ComboBox[] = [];
 
+  @Input() indexDesejado: number;
+
+  @Input() valorDefault: any;
+
   @Output() itemSelecionadoEvent = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit(): void {
+    this.obterValorDefault();
   }
 
   itemSelecionado(valor: any) {
     this.itemSelecionadoEvent.emit(valor);
+  }
+
+  obterValorDefault() {
+    this.valorDefault = this.conteudoCombo[this.indexDesejado];
   }
 }

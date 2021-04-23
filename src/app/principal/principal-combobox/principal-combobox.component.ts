@@ -12,22 +12,30 @@ export class PrincipalComboboxComponent implements OnInit {
   comboStatus: ComboBox[] = [];
   comboPedido: ComboBox[] = [];
 
+  indexSexoDesejado: number;
+  indexStatusDesejado: number;
+  indexStatusPedidoDesejado: number;
+
   constructor() { }
 
   ngOnInit(): void {
-    this.listarSexo();
-    this.listarStatus();
-    this.listarStatusPedido();
+    this.popularComboSexo();
+    this.popularComboStatus();
+    this.popularComboStatusPedido();
+
+    this.obterIndiceDoSexoDesejado();
+    this.obterIndiceDoStatusDesejado();
+    this.obterIndiceDoStatusPedidoDesejado();
   }
 
-  listarSexo() {
+  popularComboSexo() {
     this.comboSexo = [
       { Valor: 1, Descricao: 'Feminino' },
       { Valor: 2, Descricao: 'Masculino' },
     ];
   }
 
-  listarStatus() {
+  popularComboStatus() {
     this.comboStatus = [
       { Valor: 1, Descricao: 'Ativo' },
       { Valor: 2, Descricao: 'Pendente' },
@@ -35,7 +43,7 @@ export class PrincipalComboboxComponent implements OnInit {
     ];
   }
 
-  listarStatusPedido() {
+  popularComboStatusPedido() {
     this.comboPedido = [
       { Valor: 1, Descricao: 'Aguardando' },
       { Valor: 2, Descricao: 'Feito' },
@@ -54,6 +62,21 @@ export class PrincipalComboboxComponent implements OnInit {
 
   statusPedidoSelecionado(valor: any) {
     console.log(`Recebendo valor do componente Combo-box ${valor.Descricao}`);
+  }
+
+  obterIndiceDoSexoDesejado() {
+    let idSexoSelecionado = 1; // Para vim o status pendente como default, valor vem do service
+    this.indexSexoDesejado = this.comboSexo.map((item) => item.Valor).indexOf(idSexoSelecionado);
+  }
+
+  obterIndiceDoStatusDesejado() {
+    let idStatusSelecionado = 3; // Para vim o status pendente como default, valor vem do service
+    this.indexStatusDesejado = this.comboStatus.map((item) => item.Valor).indexOf(idStatusSelecionado);
+  }
+
+  obterIndiceDoStatusPedidoDesejado() {
+    let idStatusPedidoSelecionado = 1; // Para vim o status pendente como default, valor vem do service
+    this.indexStatusPedidoDesejado = this.comboPedido.map((item) => item.Valor).indexOf(idStatusPedidoSelecionado);
   }
 
 }
