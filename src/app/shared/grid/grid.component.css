@@ -2,3 +2,11 @@ table {
   width: 98%;
   margin: auto;
 }
+
+.excluir {
+  cursor: pointer;
+}
+
+.icone-excluir {
+  color: #df4848;
+}

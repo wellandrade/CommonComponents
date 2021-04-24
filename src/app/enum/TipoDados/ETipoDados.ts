@@ -1,5 +1,6 @@
 export enum ETipoDados {
     Texto = 'Texto',
     CNPJ = 'CNPJ',
-    CPF = 'CPF'
+    CPF = 'CPF',
+    Excluir = 'Excluir'
 }

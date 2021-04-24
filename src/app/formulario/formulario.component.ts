@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+import { ETipoDados } from '../enum/TipoDados/ETipoDados';
+import { Cliente } from '../models/cliente.mode';
+import { DadosCliente } from '../models/periodic-element.model';
+import { TipoDeDadosTabela } from '../models/tipo-dados.model';
+import { ServicefakeService } from '../service/servicefake.service';
+
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
@@ -9,22 +15,31 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class FormularioComponent implements OnInit {
 
   formCadastro: FormGroup;
+  displayedColumns: string[] = ['id', 'nome', 'CPF', 'CNPJ', 'novaColuna', 'icone'];
 
-  constructor(private fb: FormBuilder) { }
+  dataSource: DadosCliente[];
+
+  constructor(private fb: FormBuilder,
+    private serviceFake: ServicefakeService) { }
 
   ngOnInit(): void {
     this.criarFormulario();
+    this.obterDadosCliente();
+  }
+
+  obterDadosCliente() {
+    // this.dataSource = this.serviceFake.listarDadosCliente();
+    this.dataSource = this.serviceFake.obterPeriodicElement();
   }
 
   criarFormulario() {
     this.formCadastro = this.fb.group({
       nome: ['', Validators.compose([Validators.required, Validators.maxLength(10)])],
       email: ['', Validators.compose([Validators.required, Validators.maxLength(10)])],
-      endereco: this.fb.group({
-        cep: ['', Validators.compose([Validators.required, Validators.maxLength(10)])],
-        logradouro: ['', Validators.compose([Validators.required, Validators.maxLength(10)])],
-        bairro: ['', Validators.compose([Validators.required, Validators.maxLength(10)])],
-      })
+      // endereco: this.fb.group({
+      cep: ['', Validators.compose([Validators.required, Validators.maxLength(10)])],
+      logradouro: ['', Validators.compose([Validators.required, Validators.maxLength(10)])]
+      // })
     })
   }
 
@@ -56,11 +71,13 @@ export class FormularioComponent implements OnInit {
 
   salvar() {
     if (this.validarCampos()) {
-      this.obterValoresDoForm();
-      console.log('Dados cadastrados');
+      this.serviceFake.gravarDadosCliente(this.formCadastro.value);
+      this.formCadastro.reset();
+      alert('Dados cadastrado com sucesso');
+      this.obterDadosCliente();
     }
     else {
-      console.log('Formulario invalido');
+      alert('Formulario invalido');
     }
   }
 

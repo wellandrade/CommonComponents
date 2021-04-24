@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { TipoDeDadosTabela } from 'src/app/models/tipo-dados.model';
 
 @Component({
@@ -14,10 +14,16 @@ export class GridComponent implements OnInit {
 
   @Input() dadosTabela: any[];
 
+  @Output() itemSelecionado = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit(): void {
 
+  }
+
+  removerRegistro(item: any) {
+    this.itemSelecionado.emit(item);
   }
 
 }

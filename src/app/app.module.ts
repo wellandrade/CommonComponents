@@ -21,6 +21,7 @@ import { PrincipalTableComponent } from './principal/principal-table/principal-t
 import { MascaraCnpjPipe } from './pipes/mascara-cnpj.pipe';
 import { MascaraCPFPipe } from './pipes/mascara-cpf.pipe';
 import { FormularioComponent } from './formulario/formulario.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { FormularioComponent } from './formulario/formulario.component';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatTableModule
+    MatTableModule, 
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

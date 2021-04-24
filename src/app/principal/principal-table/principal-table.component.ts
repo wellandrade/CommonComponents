@@ -14,7 +14,7 @@ export class PrincipalTableComponent implements OnInit {
 
   tipoDeDadosTabela: TipoDeDadosTabela[]= [];
 
-  nomeColunas: string[] = ['id', 'nome', 'CPF', 'CNPJ', 'novaColuna'];
+  nomeColunas: string[] = ['id', 'nome', 'CPF', 'CNPJ', 'excluir'];
   dataSource: DadosCliente[];
 
   constructor(private serviceFake: ServicefakeService) { }
@@ -30,12 +30,16 @@ export class PrincipalTableComponent implements OnInit {
       { nomeColuna: 'nome', tipoColuna: ETipoDados.Texto },
       { nomeColuna: 'CPF', tipoColuna: ETipoDados.CPF },
       { nomeColuna: 'CNPJ', tipoColuna: ETipoDados.CNPJ },
-      { nomeColuna: 'novaColuna', tipoColuna: ETipoDados.Texto }
+      { nomeColuna: 'excluir', tipoColuna: ETipoDados.Excluir }
     ];
   }
 
   popularTabela() {
     this.dataSource = this.serviceFake.obterPeriodicElement();
+  }
+
+  excluirRegistro(itemSelecionado: any) {
+    console.log(itemSelecionado);
   }
 
 }

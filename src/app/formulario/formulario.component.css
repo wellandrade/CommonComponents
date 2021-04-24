@@ -2,8 +2,14 @@
   min-width: 150px;
   max-width: 500px;
   width: 100%;
+  margin-left: 25rem;
 }
 
 .example-full-width {
+  width: 40%;
+  margin-left: 0.5rem;
+}
+
+table {
   width: 100%;
 }

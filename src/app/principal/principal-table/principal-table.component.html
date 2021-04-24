@@ -1,1 +1,3 @@
-<app-grid [dadosTabela]="dataSource" [definicaoNomeDasColunas]="nomeColunas" [tipoColunas]="tipoDeDadosTabela" ></app-grid>
+<app-grid [dadosTabela]="dataSource" [definicaoNomeDasColunas]="nomeColunas" [tipoColunas]="tipoDeDadosTabela"
+    (itemSelecionado)="excluirRegistro($event)">
+</app-grid>
