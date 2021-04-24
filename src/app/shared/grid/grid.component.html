@@ -4,6 +4,9 @@
             <th mat-header-cell *matHeaderCellDef> {{ item.nomeColuna }} </th>
 
             <ng-container [ngSwitch]="item.tipoColuna">
+                <ng-container *ngSwitchCase="'Link'">
+                    <td mat-cell *matCellDef="let element"><a href="#">{{ element[item.nomeColuna] }}</a> </td>
+                </ng-container>
                 <ng-container *ngSwitchCase="'Texto'">
                     <td mat-cell *matCellDef="let element">{{ element[item.nomeColuna] }}</td>
                 </ng-container>

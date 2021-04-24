@@ -26,7 +26,7 @@ export class PrincipalTableComponent implements OnInit {
 
   criarTipoDadosTabela(): TipoDeDadosTabela[] {
     return [
-      { nomeColuna: 'codigo', tipoColuna: ETipoDados.Texto },
+      { nomeColuna: 'codigo', tipoColuna: ETipoDados.Link },
       { nomeColuna: 'nome', tipoColuna: ETipoDados.Texto },
       { nomeColuna: 'CPF', tipoColuna: ETipoDados.CPF },
       { nomeColuna: 'CNPJ', tipoColuna: ETipoDados.CNPJ },
