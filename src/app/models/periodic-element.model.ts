@@ -1,9 +1,11 @@
-import { Endereco } from "./endereco.model";
+import { DefaultGrid } from "./default-grid";
 
-export interface DadosCliente {
-    id: number;
+export class DadosCliente implements DefaultGrid {
+    
+    codigo: number;
     nome: string;
     CPF: string;
     CNPJ: string;
-    novaColuna: string;
+    excluir: string;
+    
 }

@@ -14,7 +14,7 @@ export class PrincipalTableComponent implements OnInit {
 
   tipoDeDadosTabela: TipoDeDadosTabela[]= [];
 
-  nomeColunas: string[] = ['id', 'nome', 'CPF', 'CNPJ', 'excluir'];
+  nomeColunas: string[] = ['codigo', 'nome', 'CPF', 'CNPJ', 'excluir'];
   dataSource: DadosCliente[];
 
   constructor(private serviceFake: ServicefakeService) { }
@@ -26,7 +26,7 @@ export class PrincipalTableComponent implements OnInit {
 
   criarTipoDadosTabela(): TipoDeDadosTabela[] {
     return [
-      { nomeColuna: 'id', tipoColuna: ETipoDados.Texto },
+      { nomeColuna: 'codigo', tipoColuna: ETipoDados.Texto },
       { nomeColuna: 'nome', tipoColuna: ETipoDados.Texto },
       { nomeColuna: 'CPF', tipoColuna: ETipoDados.CPF },
       { nomeColuna: 'CNPJ', tipoColuna: ETipoDados.CNPJ },
