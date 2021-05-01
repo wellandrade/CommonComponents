@@ -23,6 +23,9 @@ import { MascaraCPFPipe } from './pipes/mascara-cpf.pipe';
 import { FormularioComponent } from './formulario/formulario.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { DialogComponent } from './shared/dialog/dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     PrincipalTableComponent,
     MascaraCnpjPipe,
     MascaraCPFPipe,
-    FormularioComponent
+    FormularioComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,9 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatSelectModule,
     MatTableModule,
     MatIconModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatDialogModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
