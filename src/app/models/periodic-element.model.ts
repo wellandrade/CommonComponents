@@ -7,5 +7,6 @@ export class DadosCliente implements DefaultGrid {
     CPF: string;
     CNPJ: string;
     excluir: string;
+    ativo: boolean;
     
 }

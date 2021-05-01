@@ -22,6 +22,7 @@ import { MascaraCnpjPipe } from './pipes/mascara-cnpj.pipe';
 import { MascaraCPFPipe } from './pipes/mascara-cpf.pipe';
 import { FormularioComponent } from './formulario/formulario.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -47,8 +48,9 @@ import { MatIconModule } from '@angular/material/icon';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatTableModule, 
-    MatIconModule
+    MatTableModule,
+    MatIconModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

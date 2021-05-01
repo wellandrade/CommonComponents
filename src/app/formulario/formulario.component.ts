@@ -28,8 +28,7 @@ export class FormularioComponent implements OnInit {
   }
 
   obterDadosCliente() {
-    // this.dataSource = this.serviceFake.listarDadosCliente();
-    this.dataSource = this.serviceFake.obterPeriodicElement();
+    this.dataSource = this.serviceFake.dadosFake();
   }
 
   criarFormulario() {

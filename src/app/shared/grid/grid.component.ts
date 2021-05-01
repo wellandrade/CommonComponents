@@ -16,6 +16,8 @@ export class GridComponent implements OnInit {
 
   @Output() itemSelecionado = new EventEmitter<string>();
 
+  @Output() itemToggleSelecionado = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit(): void {
@@ -26,4 +28,7 @@ export class GridComponent implements OnInit {
     this.itemSelecionado.emit(item);
   }
 
+  onChangeToggle(item: any) {
+    this.itemToggleSelecionado.emit(item);
+  }
 }

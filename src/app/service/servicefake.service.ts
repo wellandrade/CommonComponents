@@ -11,11 +11,11 @@ export class ServicefakeService {
 
   constructor() { }
 
-  obterPeriodicElement(): DadosCliente[] {
+  dadosFake(): DadosCliente[] {
     return [
-      { codigo: 1, nome: 'Ana', CPF: '01234567899', CNPJ: '11100033344447', excluir: '' },
-      { codigo: 2, nome: 'Maria', CPF: '27897987987', CNPJ: '77788899955544', excluir: '' },
-      { codigo: 3, nome: 'Joao', CPF: '65015314564', CNPJ: '00088899977754', excluir: '' },
+      { codigo: 1, nome: 'Ana', CPF: '01234567899', CNPJ: '11100033344447', excluir: '', ativo: true },
+      { codigo: 2, nome: 'Maria', CPF: '27897987987', CNPJ: '77788899955544', excluir: '', ativo: false },
+      { codigo: 3, nome: 'Joao', CPF: '65015314564', CNPJ: '00088899977754', excluir: '', ativo: true },
     ]
   }
 

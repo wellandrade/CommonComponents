@@ -5,5 +5,6 @@ export enum ETipoDados {
     Link = 'Link',
     Data = 'Data',
     DataHora = 'DataHora',
-    Excluir = 'Excluir'
+    Excluir = 'Excluir',
+    SlideToggle = 'SlideToggle'
 }
