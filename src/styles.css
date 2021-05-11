@@ -1,13 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-.mat-slide-toggle.mat-checked .mat-slide-toggle-bar{
-    background-color: #90EE90;
+html,
+body {
+  height: 100%;
 }
 
-.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb
-{
-    background-color: #008000;
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+  background-color: #88F6AB;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+  background-color: #03BD3E;
+}
+
+.mat-slide-toggle-thumb {
+  background-color: #C5D2C9;
 }
