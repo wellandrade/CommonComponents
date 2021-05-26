@@ -11,11 +11,11 @@ body {
 }
 
 .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
-  background-color: #88F6AB;
+  background-color: #91c656;
 }
 
 .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
-  background-color: #03BD3E;
+  background-color: #12992f;
 }
 
 .mat-slide-toggle-thumb {

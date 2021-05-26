@@ -2,3 +2,7 @@
 <app-grid [dadosTabela]="dataSource" [definicaoNomeDasColunas]="nomeColunas" [tipoColunas]="tipoDeDadosTabela"
     (itemSelecionado)="excluirRegistro($event)" (itemToggleSelecionado)="inativarRegistros($event)">
 </app-grid>
+
+<mat-paginator [pageSizeOptions]="[1, 2, 3]" showFirstLastButtons>
+
+</mat-paginator>

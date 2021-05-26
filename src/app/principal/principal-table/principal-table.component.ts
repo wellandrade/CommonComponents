@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { DadosCliente } from 'src/app/models/periodic-element.model';
 import { ServicefakeService } from 'src/app/service/servicefake.service';
@@ -7,6 +7,9 @@ import { TipoDeDadosTabela } from 'src/app/models/tipo-dados.model';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from 'src/app/shared/dialog/dialog.component';
 import { takeUntil } from 'rxjs/operators';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-principal-table',
@@ -20,12 +23,17 @@ export class PrincipalTableComponent implements OnInit {
   nomeColunas: string[] = ['codigo', 'nome', 'CPF', 'CNPJ', 'excluir', 'ativo'];
   dataSource: DadosCliente[];
 
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
+
   constructor(private serviceFake: ServicefakeService,
     private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.popularTabela();
     this.tipoDeDadosTabela = this.criarTipoDadosTabela();
+    
   }
 
   criarTipoDadosTabela(): TipoDeDadosTabela[] {
@@ -41,6 +49,7 @@ export class PrincipalTableComponent implements OnInit {
 
   popularTabela() {
     this.dataSource = this.serviceFake.dadosFake();
+    // this.dataSource.paginator = this.paginator;
   }
 
   excluirRegistro(itemSelecionado: any) {

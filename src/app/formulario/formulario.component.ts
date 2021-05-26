@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { ETipoDados } from '../enum/TipoDados/ETipoDados';
-import { Cliente } from '../models/cliente.mode';
 import { DadosCliente } from '../models/periodic-element.model';
-import { TipoDeDadosTabela } from '../models/tipo-dados.model';
 import { ServicefakeService } from '../service/servicefake.service';
 
 @Component({

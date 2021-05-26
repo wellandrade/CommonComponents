@@ -8,16 +8,17 @@ table {
 }
 
 .icone-excluir {
-  color: #cc2b2b;
+  color: #ff0000;
+  margin-left: 10%;
 }
 
 th {
-  font-size: 20px;
-  color: black;
-  font-weight: 200;
-  background-color: #4EB9D4;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 100;
+  background-color: #fb8500;
 }
 
 td {
-  background-color: #E3E6E7
+  background-color: #f9c74f
 }
