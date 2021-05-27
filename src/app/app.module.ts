@@ -10,6 +10,9 @@ import { ComboBoxComponent } from './shared/combo-box/combo-box.component';
 import { PrincipalAutoCompleteComponent } from './principal/principal-auto-complete/principal-auto-complete.component';
 import { PrincipalComboboxComponent } from './principal/principal-combobox/principal-combobox.component';
 import { GridComponent } from './shared/grid/grid.component';
+import { CardViewComponent } from './card/card-view/card-view.component';
+
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
@@ -27,6 +30,8 @@ import { DialogComponent } from './shared/dialog/dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatCardModule} from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -41,7 +46,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MascaraCnpjPipe,
     MascaraCPFPipe,
     FormularioComponent,
-    DialogComponent
+    DialogComponent,
+    CardViewComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +64,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatSlideToggleModule,
     MatDialogModule,
     MatButtonModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatCardModule,
+    MatToolbarModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

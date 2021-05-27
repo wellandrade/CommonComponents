@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+    Demo de card
+</mat-toolbar>
+<div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="10px grid">
+        <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of [1, 2, 3, 4, 5, 6, 7]">
+            <mat-card class="mat-elevation-z4">
+                <mat-card-header>
+                    Titulo da imagem
+                </mat-card-header>
+                <img mat-card-image src="../../../assets/img/pet.jpg" class="img">
+                <mat-card-content>
+                    <p>Pet</p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button>Like</button>
+                    <button mat-button>Share</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>
